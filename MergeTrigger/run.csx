@@ -22,7 +22,7 @@ public static void RunStoredProcWithRunId(string sqlConnectionString, string sto
                 CommandType = CommandType.StoredProcedure
             })
         {
-            command.CommandTimeout = 180;
+            command.CommandTimeout = 900;
             conn.Open();
             var obj = command.ExecuteScalar();
             conn.Close();
